@@ -13,9 +13,60 @@
         color: #333;
         font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
         padding: 1em;
-        margin: 0;
+        margin: 0 auto;
         width: 500px;
       }
+
+      h2 {
+        text-align: center;
+        margin-top: 0;
+      }
+
+      form {
+        position: relative;
+        /* Center the form on the page */
+        margin: 0 auto;
+        width: 500px;
+        /* Form outline */
+        padding: 1em;
+        border: 1px solid #CCC;
+        border-radius: 1em;
+      }
+
+      li {
+        margin-top: 0.8em;
+      }
+
+      input,
+      select,
+      option {
+        font: 1em sans-serif;
+        /* Uniform text field size */
+        width: 180px;
+
+        /* Match form field borders */
+        border: 1px solid #999;
+        /* vertical-align: top; */
+      }
+
+      label {
+        display: inline-block;
+        text-align: right;
+        width: 150px;
+      }
+
+      .button {
+        margin-left: 154px;
+        width: 180px;
+        font: 1em sans-serif;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
 
     </style>
   </head>
@@ -46,7 +97,7 @@
           </select>
         </li>
         <li>
-          <button>Update preferences</button>
+          <button class="button">Update preferences</button>
         </li>
       </ul>
     </form>
