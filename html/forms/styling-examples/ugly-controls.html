@@ -15,6 +15,7 @@
         margin-bottom: 20px;
       }
 
+      /* Aplly global normalization for same size & adopt parent font, etx */
       button, label, input, select, progress, meter {
         display: block;
         font-family: inherit;
@@ -26,15 +27,18 @@
         height: 30px;
       }
 
+      /* Get rid of default dropdown arrow */
       select {
         -webkit-appearance: none;
         appearance: none;
       }
 
+      /* Extra wrapper around <select> control to make styling stick */
       .select-wrapper {
         position: relative;
       }
 
+       /* Replace default dropdown arrow  & align/ Only works on wrapper, not select itself */ 
       .select-wrapper::after {
         content: "▼";
         font-size: 1rem;
@@ -43,9 +47,28 @@
         position: absolute;
       }
 
+      /* uniform shadow & rounded corners for aplicable conrols */
+      /* on other controls like range types, progress bars, and meters they just add an ugly box around the control area, so it doesn't make sense. */
       input[type="text"], input[type="datetime-local"], input[type="color"], select {
         box-shadow: inset 1px 1px 3px #ccc;
         border-radius: 5px;
+      }
+
+      /* Extra - Change default slider */
+      /* Styling the slider drag handle is not easy & required complext CSS code */
+      input[type="range"] {
+        appearance: none;
+        -webkit-appearance: none;
+        background: red;
+        height: 6px;
+        padding: 0;
+        outline: 1px solid transparent;
+      }
+
+      /* Extra - Remove border & leave block of color only */
+      input[type="color"] {
+        border: 0;
+        padding: 0;
       }
 
       label {
@@ -63,7 +86,8 @@
     <form>
       <div>
         <label for="select">Select box:</label>
-        <div class="select-wrapper"><select id="select" name="select">
+        <div class="select-wrapper"> <!-- Extra wrapper to override styling -->
+        <select id="select" name="select">
           <option>Banana</option>
           <option>Cherry</option>
           <option>Lemon</option>
